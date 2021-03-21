@@ -90,9 +90,11 @@ console.log(basket);
 
 //[[STRETCH GOALS]]
 
+//1. Variable declared on line 7.
 
+//
 
-
+//2. Created isFull function.
 
 function isFull() {
   if ( basket.length < maxItems ) {
@@ -103,3 +105,31 @@ function isFull() {
 }
 
 console.log( 'Is my basket full?', isFull() );
+
+
+//4.
+
+let newBasket = ['apple', 'orange', 'raspberries', 'peach' ];
+
+
+function removeItem( item ) {
+  for ( let fruit of newBasket ) {
+    if ( item === fruit ) {
+      newBasket.splice( newBasket.indexOf(item), 1 );
+      return item;
+    }
+  } return null; //**I for a while was trying to put an 'else' after the if statement and return null inside of that but it stopped the function from removing items from my array and returned undefined. I seem to be a little confused on the correct syntax for an 'else' or 'else if' inside of a function.
+}
+
+
+
+console.log(newBasket);
+
+console.log('The item removed is:', removeItem('apple'));
+console.log('The basket now includes:', newBasket);
+console.log('The item removed is:', removeItem('peach'));
+console.log('The basket now includes:', newBasket);
+console.log('The item removed is:', removeItem('blueberry'));
+console.log('The basket now includes:', newBasket);
+
+console.log(newBasket);
